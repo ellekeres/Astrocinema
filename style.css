@@ -40,11 +40,11 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-ul {
+ul.z {
   list-style-type: none;
 }
 
-li {
+ul.z li {
   display: inline;
 }
 
@@ -74,14 +74,139 @@ font-size: 70%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-astroTable {
-  border-collapse: collapse;
+.astroTable {
+  border-color: black;
   width: 100%;
 }
 
-th, td {
-  text-align: left;
+th {
+  text-align: center;
   padding: 8px;
+  text-decoration: underline;
+}
+
+td {
+  text-align: left;
+  padding: 15px;
+}
+
+tr {
+  background-color: white;
+}
+
+.astrosystems {
+  font-size: 30px;
+  letter-spacing: 4px;
+  text-align: center;
+  border: 2px solid #8040bf;
+  border-radius: 5px;
+}
+
+.systems {
+  font-style: italic;
+  font-weight: bold;
+}
+
+ul.y {
+  list-style-type: circle;
+}
+
+.button2 {
+  background-color: darkorange;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
+}
+
+.button3 {
+  background-color: limegreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
+}
+
+.button4 {
+  background-color: orchid;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
+}
+
+.button5 {
+  background-color: dodgerblue;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
+}
+
+.button6 {
+  background-color: salmon;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
+}
+
+.button7 {
+  background-color: peachpuff;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
+}
+
+.button8 {
+  background-color: lightsalmon;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  display: inline;
+  color: black;
+  cursor: pointer;
 }
 
 .catalogHeaders {

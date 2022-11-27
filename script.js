@@ -10,6 +10,7 @@ function lastUpdated(){
   document.getElementById("lm").innerHTML = "Last Modified: " + d.toDateString();
 }
 
+// Movie catalog code for slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -37,4 +38,15 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+/* changing the color of modalities and elements with buttons */
+function changeColor(color, type){
+  
+  let test = document.getElementsByClassName(type);  
+
+  for (let i = 0; i < test.length; i++) {
+   test[i].style.backgroundColor = color;
+}
+  
 }
