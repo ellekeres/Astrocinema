@@ -3,7 +3,11 @@
 
 <head>
   <title>Astrocinema</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="horoscope.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  
 </head>
 
 <body>
@@ -14,52 +18,51 @@
    <img src="images/darklogo.jpg" style="max-width:100%;height:auto;" alt="Astrocinema black and white logo">
   </header>
 
+<!-- navigation -->    
   <nav class="n" id="topnav">
     <ul class="z" id="navlist">
       <li><a href="index.html" class=button> Movie Picker </a></li>
       <li><a href="page2astrosigns.html" class=button> Astrology Signs </a></li>
       <li><a href="page3moviecatalog.html" class=button> Movie Catalog </a></li>
       <li><a href="page4horoscopes.html" class=button> Horoscopes </a></li>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
       </ul>
   </nav>
 
-    
+<!-- horoscope table with buttons -->    
   <main class="m">
     <div style="overflow-x: auto;">
-    <h2 class="movieform">Click to Learn About Your Horoscope</h2>
+    <h2 class="horoscopeHeader">Click to See Your Horoscope</h2>
     <table class="horoscopeTable">
-   <tr> 
-     <td class="button" type="button" value="button" onclick=""> Aries </td>
-    <td class="button" type="button" value="button" onclick=""> Leo </td>
-    <td class="button" type="button" value="button" onclick=""> Sagittarius </td>
+   <tr class="hRows"> 
+     <td class="horoscopeButton" type="button" value="button" onclick="test('aries')"> Aries </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('leo')"> Leo </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('sagittarius')"> Sagittarius </td>
    </tr>
-   <tr>  
-    <td class="button" type="button" value="button" onclick=""> Taurus </td>
-    <td class="button" type="button" value="button" onclick=""> Virgo </td>
-    <td class="button" type="button" value="button" onclick=""> Capricorn </td>
+   <tr class="hRows">  
+    <td class="horoscopeButton" type="button" value="button" onclick="test('taurus')"> Taurus </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('virgo')"> Virgo </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('capricorn')"> Capricorn </td>
    </tr>
-   <tr>  
-    <td class="button" type="button" value="button" onclick=""> Gemini </td>
-    <td class="button" type="button" value="button" onclick=""> Libra </td>
-    <td class="button" type="button" value="button" onclick=""> Aquarius </td>
+   <tr class="hRows">  
+    <td class="horoscopeButton" type="button" value="button" onclick="test('gemini')"> Gemini </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('libra')"> Libra </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('aquarius')"> Aquarius </td>
    </tr>
-   <tr>  
-    <td class="button" type="button" value="button" onclick=""> Cancer </td>
-    <td class="button" type="button" value="button" onclick=""> Scorpio </td>
-    <td class="button" type="button" value="button" onclick=""> Pisces </td>
+   <tr class="hRows">  
+    <td class="horoscopeButton" type="button" value="button" onclick="test('cancer')"> Cancer </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('scorpio')"> Scorpio </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="test('pisces')"> Pisces </td>
    </tr>
     </table>
   </main>  
 
-    
+ <!-- where horoscope is returned -->   
   <aside class="a">
-    <p>test</p>
+    <p id="horoscope">“The starry vault of heaven is in truth the open book of cosmic projection…”</p>
+    <p id="scopes">-Carl Jung</p>
   </aside> 
 
-
+<!-- footer -->
   <footer class="f">
       <p id="lm"></p>
     <p>astrocinema&copy; <a href="mailto:keres_cassidy@columbusstate.edu">Contact Us</a></p>

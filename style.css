@@ -40,13 +40,13 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*nav button fuctions*/
 .n {
   background-color: #8040bf;
   position: relative;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .n a {
   float: left;
   display: block;
@@ -59,16 +59,10 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Change the color of links on hover*/
 .n a:hover {
   background-color: #e3ddfd;
   text-shadow: none ;
   color: black;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.n .icon {
-  display: none;
 }
 
 ul.z {
@@ -79,6 +73,7 @@ ul.z li {
   display: inline;
 }
 
+/* movie picker page */
 .movieform {
   color: #ffffff;
   text-shadow: 0 0 7px #000000, 0 0 5px #8040bf ;
@@ -103,8 +98,8 @@ font-size: 70%;
   text-shadow: 0 0 7px #000000, 0 0 5px #000000 ;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
-}
-*/
+}*/
+
 .astroTable {
   border-color: black;
   width: 100%;
@@ -142,6 +137,7 @@ ul.y {
   list-style-type: circle;
 }
 
+/* buttons for elements and modalities */
 .button2 {
   background-color: darkorange;
   border: 2px solid black;
@@ -240,25 +236,23 @@ ul.y {
   cursor: pointer;
 }
 
+/* movie catalog page */
 .catalogHeaders {
   color: #ffffff;
   text-shadow: 0 0 7px #000000, 0 0 5px #8040bf;
   text-align: center;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 200px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -274,27 +268,36 @@ ul.y {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #8040bf;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
-  color: white;
+  color: black;
+  background-color: white;
   font-size: 15px;
-  padding: 8px 12px;
+  font-weight: bold;
+  padding: 5px 3px;
   position: absolute;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+.text {
+  color: black;
+  background-color: white;
+  font-size: 15px;
+  padding: 1px 1px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
 .dot {
   cursor: pointer;
   height: 10px;
@@ -307,10 +310,9 @@ ul.y {
 }
 
 .active, .dot:hover {
-  background-color: #570334;
+  background-color: #8040bf;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -319,10 +321,6 @@ ul.y {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-.horoscopeTable {
-  position: relative;
 }
 
 .grid-container {

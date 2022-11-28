@@ -4,8 +4,10 @@ function init() {
   }
 
 function lastUpdated(){
+  
  /* Using the new Date object and lastModified property to display the date https://www.w3schools.com/jsref/prop_doc_lastmodified.asp */
   const d = new Date(document.lastModified);
+  
 /* finding the element labeled lm and using toDateString to display a more visually appealing format*/
   document.getElementById("lm").innerHTML = "Last Modified: " + d.toDateString();
 }
@@ -77,7 +79,7 @@ function showSlides(n, slideshow) {
   dots[slideshow.currentSlideIndex-1].className += " active";
 }
 
-// changing the color of modalities and elements with buttons 
+/* changing the color of modalities and elements with buttons */
 function changeColor(color, type){
   
   let test = document.getElementsByClassName(type);  
@@ -88,12 +90,21 @@ function changeColor(color, type){
   
 }
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon 
-function myFunction() {
-  var x = document.getElementById("topnav");
-  if (x.className === "n") {
-    x.className += " responsive";
-  } else {
-    x.className = "n";
-  }
-} */
+
+/* credit for api and jquery: https://github.com/sameerkumar18/aztro */
+function test(sign){
+
+   $.ajax({
+      type:'POST',
+      url:`https://aztro.sameerkumar.website?sign=${sign}&day=today`,
+      success:function(data){
+      console.log(data);
+      
+document.getElementById("horoscope").innerHTML ="Your horoscope for today is:";
+  document.getElementById("scopes").innerHTML = data.description;
+        
+      }
+  });
+
+  
+}

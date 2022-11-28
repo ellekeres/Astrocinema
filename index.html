@@ -14,6 +14,7 @@
    <img src="images/darklogo.jpg" style="max-width:100%;height:auto;" alt="Astrocinema black and white logo">
   </header>
 
+<!-- navigation -->    
   <nav class="n" id="topnav">
     <ul class="z" id="navlist">
       <li><a href="index.html" class=button> Movie Picker </a></li>
@@ -35,12 +36,13 @@
 
         <label for="email">Email Address:</label>
         <br>
-        <input type="email" id="email" name="email" placeholder="janedoe@email.com" required>
+        <input type="email" id="email" name="email" placeholder="janedoe@email.com" required="">
         <br><br>
 
         <label for="pronoun">Preferred Pronouns:</label>
         <br>
-        <select id="pronoun" name="pronoun">
+        <select id="pronoun" name="pronoun" required="">
+          <option value="">Select</option>
           <option value="He">He/Him/His</option>
           <option value="She">She/Her/Her's</option>
           <option value="They">They/Them/Their's</option>
@@ -49,12 +51,13 @@
 
         <label for="birthday">Birthday:</label>
         <br>
-  <input type="date" id="birthday" name="birthday">
+  <input type="date" id="birthday" name="birthday" required="">
         <br><br>
-
+        
         <label for="genre">Preferred Genre:</label>
         <br>
-        <select id="genre" name="genre">
+        <select id="genre" name="genre" required="">
+          <option value="">Select</option>
           <option value="action">Action</option>
           <option value="comedy">Comedy</option>
           <option value="crime">Crime</option>
@@ -81,7 +84,7 @@
     <p>test</p>
   </aside> 
 
-
+<!-- footer -->
   <footer class="f">
       <p id="lm"></p>
     <p>astrocinema&copy; <a href="mailto:keres_cassidy@columbusstate.edu">Contact Us</a></p>
