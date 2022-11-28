@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Astrocinema</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -27,6 +29,7 @@
  <!-- astrology signs table -->   
  <main class="m"> 
    <div style="overflow-x: auto;">
+   <h3 class="astrosignsHeader">Astrology Sign Info</h3>  
    <table class="astroTable">
 <tr>
   <th>
@@ -119,10 +122,10 @@
   <li>Water signs are intuitive, receptive, empathetic, imaginative, and emotional.</li>
 </ul>
     <p>Click to see which signs belong to each element:</p>
-    <p class="button2" type="button" value="button" onclick="changeColor('darkorange', 'fire');"> Fire </p>
-    <p class="button3" type="button" value="button" onclick="changeColor('limegreen', 'earth');"> Earth </p>
-    <p class="button4" type="button" value="button" onclick="changeColor('orchid', 'air');"> Air </p>
-    <p class="button5" type="button" value="button" onclick="changeColor('dodgerblue', 'water');"> Water </p>
+    <p class="button2" type="button" value="button" onclick="changeColor('darkorange', 'fire');" tabindex="1"> Fire </p>
+    <p class="button3" type="button" value="button" onclick="changeColor('limegreen', 'earth');" tabindex="2"> Earth </p>
+    <p class="button4" type="button" value="button" onclick="changeColor('orchid', 'air');" tabindex="3"> Air </p>
+    <p class="button5" type="button" value="button" onclick="changeColor('dodgerblue', 'water');" tabindex="4"> Water </p>
 <br>
 
 <!-- modalities -->    
@@ -140,9 +143,9 @@
       </li>
   </ul>
     <p>Click to see which signs belong to each modality:</p>
-    <p class="button6" type="button" value="button" onclick="changeColor('salmon', 'cardinal');"> Cardinal </p>
-    <p class="button7" type="button" value="button" onclick="changeColor('peachpuff', 'fixed');"> Fixed </p>
-    <p class="button8" type="button" value="button" onclick="changeColor('lightsalmon', 'mutable');"> Mutable </p>
+    <p class="button6" type="button" value="button" onclick="changeColor('salmon', 'cardinal');" tabindex="5"> Cardinal </p>
+    <p class="button7" type="button" value="button" onclick="changeColor('peachpuff', 'fixed');" tabindex="6"> Fixed </p>
+    <p class="button8" type="button" value="button" onclick="changeColor('lightsalmon', 'mutable');" tabindex="7"> Mutable </p>
   </aside> 
 
 <!-- footer -->
