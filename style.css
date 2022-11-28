@@ -74,7 +74,7 @@ ul.z li {
 }
 
 /* movie picker page */
-.movieform {
+.movieformheader {
   color: #ffffff;
   text-shadow: 0 0 7px #000000, 0 0 5px #8040bf ;
 }
@@ -84,21 +84,8 @@ font-size: 70%;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 2px;
+  font-weight: bold;
 }
-/*
-.button {
-  border-radius: 8px;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  margin: 4px 2px;
-  display: inline;
-  color: white;
-  text-shadow: 0 0 7px #000000, 0 0 5px #000000 ;
-  cursor: pointer;
-  font-family: Arial, Helvetica, sans-serif;
-}*/
 
 .astroTable {
   border-color: black;
@@ -140,8 +127,8 @@ ul.y {
 /* buttons for elements and modalities */
 .button2 {
   background-color: darkorange;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -150,12 +137,17 @@ ul.y {
   display: inline;
   color: black;
   cursor: pointer;
+}
+
+.button2:hover {
+  background-color: white;
+  font-weight: bold;
 }
 
 .button3 {
   background-color: limegreen;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -164,12 +156,17 @@ ul.y {
   display: inline;
   color: black;
   cursor: pointer;
+}
+
+.button3:hover {
+  background-color: white;
+  font-weight: bold;
 }
 
 .button4 {
   background-color: orchid;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -178,12 +175,17 @@ ul.y {
   display: inline;
   color: black;
   cursor: pointer;
+}
+
+.button4:hover {
+  background-color: white;
+  font-weight: bold;
 }
 
 .button5 {
   background-color: dodgerblue;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -192,12 +194,17 @@ ul.y {
   display: inline;
   color: black;
   cursor: pointer;
+}
+
+.button5:hover {
+  background-color: white;
+  font-weight: bold;
 }
 
 .button6 {
   background-color: salmon;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -206,12 +213,17 @@ ul.y {
   display: inline;
   color: black;
   cursor: pointer;
+}
+
+.button6:hover {
+  background-color: black;
+  color: white;
 }
 
 .button7 {
   background-color: peachpuff;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -222,10 +234,15 @@ ul.y {
   cursor: pointer;
 }
 
+.button7:hover {
+  background-color: black;
+  color: white;
+}
+
 .button8 {
   background-color: lightsalmon;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -234,6 +251,11 @@ ul.y {
   display: inline;
   color: black;
   cursor: pointer;
+}
+
+.button8:hover {
+  background-color: black;
+  color: white;
 }
 
 /* movie catalog page */
@@ -306,7 +328,7 @@ ul.y {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.2s ease;
 }
 
 .active, .dot:hover {
@@ -315,13 +337,91 @@ ul.y {
 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.2s;
 }
 
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/*
+.movieButton {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}*/
+.buttonContainer {
+  height: 100px;
+  position: relative;
+}
+
+.movieContainer {
+  height: 300px;
+  position: relative;
+}
+
+.centerMovie {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.centerButton {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.movieButton {
+  display: inline-block;
+  padding: 13px 23px;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8040bf;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px darkgray;
+  cursor: pointer;
+}
+
+.movieButton:hover {
+  background-color: #e3ddfd;
+  color: black;
+}
+
+.movieButton:active {
+  background-color: #e60039;
+  box-shadow: 0 5px darkgray;
+  transform: translateY(4px);
+}
+
+/*
+#randomMovie {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}*/
 
 .grid-container {
   display: grid;

@@ -13,16 +13,40 @@ function lastUpdated(){
 }
 
 /*
-// movie catalog code for slideshow
+function formValidation() {
+
+  let booksRead = document.forms["movieForm"]["birthday"].value;
+  let faveGenre = document.forms["movieForm"]["genre"].value;
+
+  let temp = document.getElementById("formResults");
+  temp.innerHTML = "Your Astrology Sign Is: " + birthday + "<br /> The Genre You Chose Is: " + faveGenre + "<br /> So You Should Watch: " + ;
+
+  return false;
+}
+*/
+
+
+/* changing the color of modalities and elements with buttons */
+function changeColor(color, type){
+  
+  let test = document.getElementsByClassName(type);  
+
+  for (let i = 0; i < test.length; i++) {
+   test[i].style.backgroundColor = color;
+ }
+}
+
+
+/* movie catalog code for slideshow */
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// previous and next button controls
+/* previous and next button controls */
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// image controls
+/* image controls */
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -41,57 +65,20 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-}*/
-
-var slideshow1 = document.getElementById("slideshow1");
-slideshow1.currentSlideIndex = 1;
-showSlides(slideshow1.currentSlideIndex, slideshow1);
-
-var slideshow2 = document.getElementById("slideshow2");
-slideshow2.currentSlideIndex = 1;
-showSlides(slideshow2.currentSlideIndex, slideshow2);
-
-
-function plusSlides(n, slideshow) {
-  showSlides(slideshow.currentSlideIndex += n, slideshow);
 }
 
-function currentSlide(n, slideshow) {
-  showSlides(slideshow.currentSlideIndex = n, slideshow);
+/* random movie picker */
+window.onload = chooseMovie;
+
+var myMovie = new Array("images/aquarius/comedy-thelobster.jpg","images/aries/drama-eternalsunshine.jpeg","images/cancer/horror-midsommar.jpg","images/capricorn/family-kikisdelivery.jpg","images/gemini/fantasy-theprestige.jpg");
+
+function chooseMovie() {
+     var randomNum = Math.floor(Math.random() * myMovie.length);
+     document.getElementById("randomMovie").src = myMovie[randomNum];
+
 }
 
-function showSlides(n, slideshow) {
-  
-
-
-  var i;
-  var slides = slideshow.getElementsByClassName("movieSlides");
-  var dots = slideshow.getElementsByClassName("dot");
-  if (n > slides.length) {slideshow.currentSlideIndex = 1}    
-  if (n < 1) {slideshow.currentSlideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideshow.currentSlideIndex-1].style.display = "block";  
-  dots[slideshow.currentSlideIndex-1].className += " active";
-}
-
-/* changing the color of modalities and elements with buttons */
-function changeColor(color, type){
-  
-  let test = document.getElementsByClassName(type);  
-
-  for (let i = 0; i < test.length; i++) {
-   test[i].style.backgroundColor = color;
-}
-  
-}
-
-
-/* credit for api and jquery: https://github.com/sameerkumar18/aztro */
+/* credit for api and jquery for horoscopes: https://github.com/sameerkumar18/aztro */
 function test(sign){
 
    $.ajax({
