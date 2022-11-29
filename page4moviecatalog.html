@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Astrocinema</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+  <header class="h">
+   <img src="images/darklogo.jpg" style="max-width:100%;height:auto;" alt="Astrocinema black and white logo">
+  </header>
+
+<!-- navigation -->    
+  <nav class="n">
+    <div class="astronav" id="astronav2">
+      <a href="index.html" class="active" role="button">about</a>
+      <a href="page2moviepicker.html" role="button">movie picker</a>
+      <a href="page3astrosigns.html" role="button">astrology signs</a>
+      <a href="page4moviecatalog.html" role="button">movie catalog</a>
+      <a href="page5horoscopes.html" role="button">horoscopes</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </nav>
+
+    
+  <main class="m">
+
+   <h3 class="catalogHeaders">movie catalog sneak peek:</h1>
+
+<!-- action slides -->    
+  <button type="button" class="collapsible" tabindex="1">Action</button>
+<div class="content">
+<div class="w3-content w3-display-container" role="collapsible container for action movie slideshow">
+  <img class="movies1" src="images/aries/action-diehard.jpg" style="width:50%" alt="Die Hard">
+  <img class="movies1" src="images/gemini/action-birdsofprey.jpg" style="width:50%" alt="Birds of Prey">
+  <img class="movies1" src="images/cancer/action-johnwick.jpg" style="width:50%" alt="John Wick">
+  <img class="movies1" src="images/virgo/action-missionimpossible.jpg" style="width:50%" alt="Mission: Impossible">
+  <img class="movies1" src="images/libra/action-badboys.jpg" style="width:50%" alt="Bad Boys">
+  <img class="movies1" src="images/scorpio/action-terminator.jpg" style="width:50%" alt="The Terminator">
+  <button class="movieleft" onclick="plusDivs(-1, 0)" tabindex="2">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 0)" tabindex="3">&#10095;</button>
+</div>
+</div>
+
+ <!-- comedy slides -->   
+<button type="button" class="collapsible" tabindex="4">Comedy</button>
+<div class="content">
+<div class="w3-content w3-display-container" role="collapsible container for comedy movie slideshow">
+  <img class="movies2" src="images/taurus/comedy-fantasticmrfox.jpeg" style="width:50%" alt="Fantastic Mr. Fox">
+  <img class="movies2" src="images/leo/comedy-almostfamous.jpeg" style="width:50%" alt="Almost Famous">
+  <img class="movies2" src="images/virgo/comedy-booksmart.jpg" style="width:50%" alt="Booksmart">
+  <img class="movies2" src="images/sag/comedy-bridesmaids.jpg" style="width:50%" alt="Bridesmaids">
+  <img class="movies2" src="images/capricorn/comedy-thedevilwearsprada.jpg" style="width:50%" alt="The Devil Wears Prada">
+  <img class="movies2" src="images/pisces/comedy-littlemisssunshine.jpg" style="width:50%" alt="Little Miss Sunshine">
+  <button class="movieleft" onclick="plusDivs(-1, 1)" tabindex="5">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 1)" tabindex="6">&#10095;</button>
+ </div>
+</div>
+
+<!-- crime slides -->    
+<button type="button" class="collapsible" tabindex="7">Crime</button>
+<div class="content">    
+    <div class="w3-content w3-display-container" role="collapsible container for crime movie slideshow">
+  <img class="movies3" src="images/taurus/crime-goodtime.jpeg" style="width:50%" alt="Good Time">
+  <img class="movies3" src="images/leo/crime-hustlers.jpg" style="width:50%" alt="Hustlers">
+  <img class="movies3" src="images/virgo/crime-zodiac.jpg" style="width:50%" alt="Zodiac">
+  <img class="movies3" src="images/gemini/crime-pulpfiction.jpg" style="width:50%" alt="Pulp Fiction">
+  <img class="movies3" src="images/aquarius/crime-aclockworkorange.jpg" style="width:50%" alt="A Clockwork Orange">
+  <button class="movieleft" onclick="plusDivs(-1, 2)" tabindex="8">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 2)" tabindex="9">&#10095;</button>
+    </div>
+  </div>
+
+<!-- drama slides -->    
+ <button type="button" class="collapsible" tabindex="10">Drama</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for drama movie slideshow">
+  <img class="movies4" src="images/virgo/drama-whiplash.jpg" style="width:50%" alt="Whiplash">
+  <img class="movies4" src="images/aquarius/drama-killyourdarlings.jpg" style="width:50%" alt="Kill Your Darlings">
+  <img class="movies4" src="images/leo/drama-blackkklansman.jpeg" style="width:50%" alt="BlackKklansman">
+  <img class="movies4" src="images/gemini/drama-thoroughbreds.jpg" style="width:50%" alt="Thoroughbreds">
+  <img class="movies4" src="images/scorpio/drama-girlinterrupted.jpg" style="width:50%" alt="Girl Interrupted">
+  <button class="movieleft" onclick="plusDivs(-1, 3)" tabindex="11">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 3)" tabindex="12">&#10095;</button>
+  </div>
+</div> 
+
+<!-- family slides -->    
+ <button type="button" class="collapsible" tabindex="13">Family</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for family movie slideshow">
+  <img class="movies5" src="images/leo/family-luca.jpg" style="width:50%" alt="Luca">
+  <img class="movies5" src="images/aquarius/family-findingnemo.jpg" style="width:50%" alt="Finding Nemo">
+  <img class="movies5" src="images/pisces/family-aliceinwonderland.jpg" style="width:50%" alt="Alice in Wonderland">
+  <img class="movies5" src="images/gemini/family-turningred.jpg" style="width:50%" alt="Turning Red">
+  <img class="movies5" src="images/sag/family-spiritedaway.jpg" style="width:50%" alt="Spirited Away">
+  <img class="movies5" src="images/taurus/family-shrek.jpeg" style="width:50%" alt="Shrek">
+  <button class="movieleft" onclick="plusDivs(-1, 4)" tabindex="14">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 4)" tabindex="15">&#10095;</button>
+  </div>
+</div>
+
+<!-- fantasy slides -->    
+    <button type="button" class="collapsible" tabindex="16">Fantasy</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for fantasy movie slideshow">
+  <img class="movies6" src="images/pisces/fantasy-shapeofwater.jpg" style="width:50%" alt="The Shape of Water">
+  <img class="movies6" src="images/virgo/fantasy-lotr.jpg" style="width:50%" alt="The Lord of the Rings: The Fellowship of the Ring">
+  <img class="movies6" src="images/scorpio/fantasy-panslabyrinth.jpg" style="width:50%" alt="Pan's Labyrinth">
+  <img class="movies6" src="images/libra/fantasy-godzilla.jpg" style="width:50%" alt="Godzilla">
+  <img class="movies6" src="images/sag/fantasy-pirates.jpg" style="width:50%" alt="Pirates of the Caribbean: The Curse of the Black Pearl">
+  <img class="movies6" src="images/leo/fantasy-premonition.jpg" style="width:50%" alt="Premonition">
+  <button class="movieleft" onclick="plusDivs(-1, 5)" tabindex="17">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 5)" tabindex="18">&#10095;</button>
+  </div>
+</div>
+
+<!-- horror slides -->    
+    <button type="button" class="collapsible" tabindex="19">Horror</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for horror movie slideshow">
+  <img class="movies7" src="images/cancer/horror-midsommar.jpg" style="width:50%" alt="Midsommar">
+  <img class="movies7" src="images/aries/horror-alien.jpg" style="width:50%" alt="Alien">
+  <img class="movies7" src="images/capricorn/horror-americanpsycho.jpeg" style="width:50%" alt="American Psycho">
+  <img class="movies7" src="images/sag/horror-getout.jpeg" style="width:50%" alt="Get Out">
+  <img class="movies7" src="images/libra/horror-spring.jpeg" style="width:50%" alt="Spring">
+  <img class="movies7" src="images/aquarius/horror-killingofasacreddeer.jpg" style="width:50%" alt="Killing of a Sacred Deer">
+  <button class="movieleft" onclick="plusDivs(-1, 6)" tabindex="20">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 6)" tabindex="21">&#10095;</button>
+  </div>
+</div>
+    
+    <!-- mystery/thriller slides -->
+    <button type="button" class="collapsible" tabindex="22">Mystery/Thriller</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for mystery/thriller movie slideshow">
+  <img class="movies8" src="images/virgo/mystery-knivesout.jpg" style="width:50%" alt="Knives Out">
+  <img class="movies8" src="images/aquarius/mystery-lighthouse.jpg" style="width:50%" alt="The Lighthouse">
+  <img class="movies8" src="images/aries/mystery-prisoners.jpg" style="width:50%" alt="Prisoners">
+  <img class="movies8" src="images/cancer/mystery-dontworrydarling.jpg" style="width:50%" alt="Don't Worry Darling">
+  <img class="movies8" src="images/gemini/mystery-parasite.jpg" style="width:50%" alt="Parasite">
+  <img class="movies8" src="images/scorpio/mystery-blackswan.jpg" style="width:50%" alt="Black Swan">
+  <button class="movieleft" onclick="plusDivs(-1, 7)" tabindex="23">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 7)" tabindex="24">&#10095;</button>
+  </div>
+</div>
+    
+    <!-- romance slides -->
+    <button type="button" class="collapsible" tabindex="25">Romance</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for romance movie slideshow">
+  <img class="movies9" src="images/virgo/romance-prideandprejudice.jpg" style="width:50%" alt="Pride and Prejudice">
+  <img class="movies9" src="images/aries/romance-loveandbasketball.jpg" style="width:50%" alt="Love and Basketball">
+  <img class="movies9" src="images/cancer/romance-thenotebook.jpg" style="width:50%" alt="The Notebook">
+  <img class="movies9" src="images/capricorn/romance-theoryofeverything.jpg" style="width:50%" alt="The Theory of Everything">
+  <img class="movies9" src="images/scorpio/romance-moonlight.jpg" style="width:50%" alt="Moonlight">
+  <img class="movies9" src="images/pisces/romance-bigfish.jpg" style="width:50%" alt="Big Fish">
+  <button class="movieleft" onclick="plusDivs(-1, 8)" tabindex="26">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 8)" tabindex="27">&#10095;</button>
+  </div>
+</div>
+    
+    <!-- rom/com slides -->
+    <button type="button" class="collapsible" tabindex="28">Rom/Com</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for rom/com movie slideshow">
+  <img class="movies10" src="images/aquarius/romcom-crazystupidlove.jpg" style="width:50%" alt="Crazy Stupid Love">
+  <img class="movies10" src="images/aries/romcom-10thingsihateaboutyou.jpg" style="width:50%" alt="10 Things I Hate About You">
+  <img class="movies10" src="images/cancer/romcom-mybigfatgreekwedding.jpg" style="width:50%" alt="My Big Fat Greek Wedding">
+  <img class="movies10" src="images/libra/romcom-crazyrichasians.jpg" style="width:50%" alt="Crazy Rich Asians">
+  <img class="movies10" src="images/virgo/romcom-whenharrymetsally.jpg" style="width:50%" alt="When Harry Met Sally">
+  <button class="movieleft" onclick="plusDivs(-1, 9)" tabindex="29">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 9)" tabindex="30">&#10095;</button>
+  </div>
+</div> 
+
+    
+    <!-- sci-fi slides -->
+    <button type="button" class="collapsible" tabindex="31">Sci-Fi</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for sci/fi movie slideshow">
+  <img class="movies11" src="images/aquarius/scifi-moon.jpg" style="width:50%" alt="Moon">
+  <img class="movies11" src="images/aries/scifi-exmachina.jpg" style="width:50%" alt="Ex Machina">
+  <img class="movies11" src="images/virgo/scifi-interstellar.jpg" style="width:50%" alt="Interstellar">
+  <img class="movies11" src="images/taurus/scifi-dune.jpeg" style="width:50%" alt="Dune">
+  <img class="movies11" src="images/gemini/scifi-inception.jpg" style="width:50%" alt="Inception">
+  <button class="movieleft" onclick="plusDivs(-1, 10)" tabindex="32">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 10)" tabindex="33">&#10095;</button>
+  </div>
+</div>
+
+    <!-- superhero slides -->
+    <button type="button" class="collapsible" tabindex="34">Superhero</button>
+<div class="content">
+    <div class="w3-content w3-display-container" role="collapsible container for superhero movie slideshow">
+  <img class="movies12" src="images/taurus/superhero-blackpanther.jpg" style="width:50%" alt="Black Panther">
+  <img class="movies12" src="images/sag/superhero-deadpool.jpg" style="width:50%" alt="Deadpool">
+  <img class="movies12" src="images/pisces/superhero-manofsteel.jpg" style="width:50%" alt="Man of Steel">
+  <img class="movies12" src="images/leo/superhero-avengers.jpg" style="width:50%" alt="Avengers">
+  <img class="movies12" src="images/aquarius/superhero-guardians.jpg" style="width:50%" alt="Guardians of the Galaxy">
+  <img class="movies12" src="images/gemini/superhero-venom.jpg" style="width:50%" alt="Venom">
+  <button class="movieleft" onclick="plusDivs(-1, 11)" tabindex="35">&#10094;</button>
+  <button class="movieright" onclick="plusDivs(1, 11)" tabindex="36">&#10095;</button>
+  </div>
+</div>
+    
+  </main>  
+
+<!-- returns javascript for random movie -->    
+  <aside class="a">
+    <div class="buttonContainer">
+       <div class="centerButton" role="document" tabindex="37">
+    <input type="button" class="movieButton" value="Random Movie">
+       </div>
+    </div>
+    <div class="movieContainer">
+      <div class="centerMovie">
+    <img src="images" width="100%" id="randomMovie" alt="Movie">
+      </div>
+    </div>
+  </aside> 
+
+<!-- footer -->
+  <footer class="f">
+      <p id="lm"></p>
+    <p>astrocinema&copy; <a href="mailto:keres_cassidy@columbusstate.edu">Contact Us</a></p>
+  </footer> 
+
+
+  
+</body>
+<script src="script.js"></script> 
+</html>

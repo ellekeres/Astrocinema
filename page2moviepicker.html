@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Astrocinema</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+  <header class="h">
+   <img src="images/darklogo.jpg" style="max-width:100%;height:auto;" alt="Astrocinema black and white logo">
+  </header>
+
+<!-- navigation -->    
+  <nav class="n">
+    <div class="astronav" id="astronav2">
+      <a href="index.html" class="active" role="button">about</a>
+      <a href="page2moviepicker.html" role="button">movie picker</a>
+      <a href="page3astrosigns.html" role="button">astrology signs</a>
+      <a href="page4moviecatalog.html" role="button">movie catalog</a>
+      <a href="page5horoscopes.html" role="button">horoscopes</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </nav>
+
+    
+     <main class="m">
+    <h2 class="movieformheader">what movie should you watch?</h2>
+      <form name="movieForm" id="mform" onsubmit="return formValidation()" method="post" aria-label="Movie picker form based on astrology sign">
+
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="first" name="first" placeholder="Jane Doe" required>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="janedoe@email.com" required="">
+        <br><br>
+
+        <label for="pronoun">Preferred Pronouns:</label>
+        <br>
+        <select id="pronoun" name="pronoun" required="">
+          <option value="">Select</option>
+          <option value="He">He/Him/His</option>
+          <option value="She">She/Her/Her's</option>
+          <option value="They">They/Them/Their's</option>
+        </select>
+          <br><br>
+
+        <label for="birthday">Birthday:</label>
+        <br>
+  <input type="date" id="birthday" name="birthday" required="">
+        <br><br>
+        
+        <label for="genre">Preferred Genre:</label>
+        <br>
+        <select id="genre" name="genre" required="">
+          <option value="">Select</option>
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="crime">Crime</option>
+          <option value="drama">Drama</option>
+          <option value="family">Family</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="horror">Horror</option>
+          <option value="mysterythriller">Mystery/Thriller</option>
+          <option value="romance">Romance</option>
+          <option value="romcom">Rom/Com</option>
+          <option value="scifi">Sci/Fi</option>
+          <option value="superhero">Superhero</option>
+          
+        </select>
+          <br><br>
+        
+        <input type="submit" value="Submit">
+  <input type="reset">
+      </form>   
+  </main>  
+
+    
+  <aside class="a">
+    <p>test</p>
+  </aside> 
+
+<!-- footer -->
+  <footer class="f">
+      <p id="lm"></p>
+    <p>astrocinema&copy; <a href="mailto:keres_cassidy@columbusstate.edu">Contact Us</a></p>
+  </footer>  
+
+
+  
+</body>
+<script src="script.js"></script> 
+</html>

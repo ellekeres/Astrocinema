@@ -1,3 +1,30 @@
+/* about page carousel
+var aboutInd = 0;
+carousel();
+
+function carousel() {
+  var y;
+  var z = document.getElementsByClassName("aboutSlides");
+  for (y = 0; y < z.length; y++) {
+    z[y].style.display = "none";  
+  }
+  aboutIndex++;
+  if (aboutInd > z.length) {aboutInd = 1}    
+    z[aboutInd-1].style.display = "block";
+  setTimeout(carousel, 3000);
+} */
+
+/* responsive nav bar */
+function navFunction() {
+  var x = document.getElementById("astronav2");
+  if (x.className === "astronav") {
+    x.className += " responsive";
+  } else {
+    x.className = "astronav";
+  }
+}
+
+
 window.onload = init;
 function init() {
   lastUpdated();
@@ -36,36 +63,53 @@ function changeColor(color, type){
  }
 }
 
+/* movie slideshows */
+var slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1];
+var slideId = ["movies1", "movies2", "movies3", "movies4", "movies5", "movies6", "movies7", "movies8", "movies9", "movies10", "movies11", "movies12"]
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+showDivs(1, 3);
+showDivs(1, 4);
+showDivs(1, 5);
+showDivs(1, 6);
+showDivs(1, 7);
+showDivs(1, 8);
+showDivs(1, 9);
+showDivs(1, 10);
+showDivs(1, 11);
 
-/* movie catalog code for slideshow */
-let slideIndex = 1;
-showSlides(slideIndex);
-
-/* previous and next button controls */
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
 }
 
-/* image controls */
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("movieSlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  x[slideIndex[no]-1].style.display = "block";  
 }
+
+/* making the slideshows collapsible */ 
+var colSlides = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < colSlides.length; i++) {
+  colSlides[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
 
 /* random movie picker */
 window.onload = chooseMovie;

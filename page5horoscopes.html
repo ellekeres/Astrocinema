@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Astrocinema</title>
-  <link href="horoscope.css" rel="stylesheet" type="text/css" />
-
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   
@@ -22,18 +22,22 @@
 
 <!-- navigation -->    
   <nav class="n">
-    <ul class="z">
-      <li><a href="index.html" class=button> Movie Picker </a></li>
-      <li><a href="page2astrosigns.html" class=button> Astrology Signs </a></li>
-      <li><a href="page3moviecatalog.html" class=button> Movie Catalog </a></li>
-      <li><a href="page4horoscopes.html" class=button> Horoscopes </a></li>
-      </ul>
+    <div class="astronav" id="astronav2">
+      <a href="index.html" class="active" role="button">about</a>
+      <a href="page2moviepicker.html" role="button">movie picker</a>
+      <a href="page3astrosigns.html" role="button">astrology signs</a>
+      <a href="page4moviecatalog.html" role="button">movie catalog</a>
+      <a href="page5horoscopes.html" role="button">horoscopes</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+    </div>
   </nav>
 
 <!-- horoscope table with buttons -->    
   <main class="m">
     <div style="overflow-x: auto;">
-    <h2 class="horoscopeHeader">Click to See Your Horoscope:</h2>
+    <h2 class="horoscopeHeader">click to view horoscope:</h2>
     <table class="horoscopeTable">
    <tr class="hRows"> 
      <td class="horoscopeButton" type="button" value="button" onclick="test('aries')" tabindex="1"> Aries </td>

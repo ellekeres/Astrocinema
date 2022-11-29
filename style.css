@@ -12,9 +12,6 @@ header {
 
 nav {
   grid-area: n;
-  background-color: #8040bf;
-  color: white;
-  text-align: center;
 }
 
 main {
@@ -40,51 +37,100 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*nav button fuctions*/
-.n {
-  background-color: #8040bf;
-  position: relative;
+/* nav buttons */
+.astronav {
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #8040bf;
+  text-shadow: 0 0 7px #000000, 0 0 5px #000000 ;
+  font-variant: small-caps;
 }
 
-.n a {
+.astronav a {
   float: left;
   display: block;
   color: white;
-  text-shadow: 0 0 7px #000000, 0 0 5px #000000 ;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
 }
 
-.n a:hover {
-  background-color: #e1e0e6;
+.astronav a:hover {
   text-shadow: none ;
+  background-color: #e3ddfd;
   color: black;
+  border: 1px solid black;
 }
 
-ul.z {
-  list-style-type: none;
+.astronav a.active {
+  text-shadow: none ;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 
-ul.z li {
-  display: inline;
+.astronav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .astronav a:not(:first-child) {display: none;}
+  .astronav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .astronav.responsive {position: relative;}
+  .astronav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .astronav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* about page */
+.aboutHeader {
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-align: center;
+  border: 1px solid #8040bf;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-variant: small-caps;
+}
+
+.aboutPara {
+  text-align: center;
+}
+
+.aboutPara2 {
+  text-align: center;
+  font-weight: bold;
 }
 
 /* movie picker page */
 .movieformheader {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 4px;
   text-align: center;
-  border: 2px solid #8040bf;
+  border: 1px solid #8040bf;
   border-radius: 5px;
   background-color: white;
+  font-variant: small-caps;
 }
 
 #mform {
-  font-size: 70%;
+  text-align: center;
+  font-size: 80%;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
@@ -92,7 +138,7 @@ ul.z li {
 }
 
 .astroTable {
-  border-color: black;
+  background-color: black;
   width: 100%;
 }
 
@@ -112,11 +158,14 @@ tr {
 }
 
 .astrosystems {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 4px;
   text-align: center;
-  border: 2px solid #8040bf;
+  border: 1px solid black;
   border-radius: 5px;
+  background-color: #8040bf;
+  color: white;
+  font-variant: small-caps;
 }
 
 .systems {
@@ -129,12 +178,14 @@ ul.y {
 }
 
 .astrosignsHeader {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 4px;
   text-align: center;
-  border: 2px solid #8040bf;
+  border: 1px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #8040bf;
+  color: white;
+  font-variant: small-caps;
 }
 
 /* buttons for elements and modalities */
@@ -273,12 +324,20 @@ ul.y {
 
 /* movie catalog page */
 .catalogHeaders {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 4px;
   text-align: center;
-  border: 2px solid #8040bf;
+  border: 1px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #8040bf;
+  color: white;
+  font-variant: small-caps;
+}
+
+.movieGenres {
+  font-size: 15px;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #8040bf;
 }
 
 .slideshow-container {
@@ -287,90 +346,37 @@ ul.y {
   margin: auto;
 }
 
-.prev, .next {
+.movieleft, .movieright {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: #8040bf;
-}
-
-.numbertext {
-  color: black;
+/* collapsible button features */
+.collapsible {
   background-color: white;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 5px 3px;
-  position: absolute;
-  top: 0;
-}
-
-.text {
-  color: black;
-  background-color: white;
-  font-size: 15px;
-  padding: 1px 1px;
-  position: absolute;
-  bottom: 5px;
+  cursor: pointer;
+  padding: 10px;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border: 2px solid #8040bf;
 }
 
-.dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 0 2px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-}
-
-.active, .dot:hover {
-  background-color: #8040bf;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/*
-.movieButton {
+.active, .collapsible:hover {
   background-color: black;
-  border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}*/
+}
+
+.content {
+  padding: 5px 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #e3ddfd;
+}
+
+/* movie randomizer */
 .buttonContainer {
   height: 100px;
   position: relative;
@@ -415,12 +421,12 @@ ul.y {
 }
 
 .movieButton:hover {
-  background-color: #e3ddfd;
-  color: black;
+  background-color: black;
 }
 
 .movieButton:active {
-  background-color: #e60039;
+  background-color: #e3ddfd;
+  color: black;
   box-shadow: 0 5px darkgray;
   transform: translateY(4px);
 }
@@ -434,6 +440,54 @@ ul.y {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }*/
+
+/* horoscope main */
+.horoscopeHeader {
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-align: center;
+  border: 1px solid #8040bf;
+  border-radius: 5px;
+  background-color: white;
+  font-variant: small-caps;
+}
+
+.horoscopeTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.hRows {
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+}
+
+.horoscopeButton {
+  background-color: #8040bf;
+  border: 3px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  margin: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.horoscopeButton:hover {
+  background-color: black;
+  text-shadow: none ;
+  color: white;
+}
+
+/* horoscope return */
+#horoscope {
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .grid-container {
   display: grid;
