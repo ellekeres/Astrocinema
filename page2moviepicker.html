@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Astrocinema</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="layout.css" rel="stylesheet" type="text/css" />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -38,17 +39,17 @@
 
         <label for="name">Name:</label>
         <br>
-        <input type="text" id="first" name="first" placeholder="Jane Doe" required>
+        <input type="text" id="first" name="first" placeholder="Jane Doe">
         <br><br>
 
         <label for="email">Email Address:</label>
         <br>
-        <input type="email" id="email" name="email" placeholder="janedoe@email.com" required="">
+        <input type="email" id="email" name="email" placeholder="janedoe@email.com">
         <br><br>
 
         <label for="pronoun">Preferred Pronouns:</label>
         <br>
-        <select id="pronoun" name="pronoun" required="">
+        <select id="pronoun" name="pronoun">
           <option value="">Select</option>
           <option value="He">He/Him/His</option>
           <option value="She">She/Her/Her's</option>
@@ -72,7 +73,7 @@
           <option value="family">Family</option>
           <option value="fantasy">Fantasy</option>
           <option value="horror">Horror</option>
-          <option value="mysterythriller">Mystery/Thriller</option>
+          <option value="mystery">Mystery/Thriller</option>
           <option value="romance">Romance</option>
           <option value="romcom">Rom/Com</option>
           <option value="scifi">Sci/Fi</option>
@@ -88,7 +89,9 @@
 
     
   <aside class="a">
-    <p>test</p>
+    <h2 class="astrosignsHeader">your result:</h2>
+    <p id="formResults"></p>
+    <img id="formImage" src="/images/virgo/crime-.jpg" style="max-width:100%;height:auto;">
   </aside> 
 
 <!-- footer -->

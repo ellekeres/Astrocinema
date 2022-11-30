@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Astrocinema</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="layout.css" rel="stylesheet" type="text/css" />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -40,24 +41,24 @@
     <h2 class="horoscopeHeader">click to view horoscope:</h2>
     <table class="horoscopeTable">
    <tr class="hRows"> 
-     <td class="horoscopeButton" type="button" value="button" onclick="test('aries')" tabindex="1"> Aries </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('leo')" tabindex="2"> Leo </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('sagittarius')" tabindex="3"> Sagittarius </td>
+     <td class="horoscopeButton" type="button" value="button" onclick="getScopes('aries')" tabindex="1"> Aries </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('leo')" tabindex="2"> Leo </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('sagittarius')" tabindex="3"> Sagittarius </td>
    </tr>
    <tr class="hRows">  
-    <td class="horoscopeButton" type="button" value="button" onclick="test('taurus')" tabindex="4"> Taurus </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('virgo')" tabindex="5"> Virgo </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('capricorn')" tabindex="6"> Capricorn </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('taurus')" tabindex="4"> Taurus </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('virgo')" tabindex="5"> Virgo </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('capricorn')" tabindex="6"> Capricorn </td>
    </tr>
    <tr class="hRows">  
-    <td class="horoscopeButton" type="button" value="button" onclick="test('gemini')" tabindex="7"> Gemini </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('libra')" tabindex="8"> Libra </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('aquarius')" tabindex="9"> Aquarius </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('gemini')" tabindex="7"> Gemini </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('libra')" tabindex="8"> Libra </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('aquarius')" tabindex="9"> Aquarius </td>
    </tr>
    <tr class="hRows">  
-    <td class="horoscopeButton" type="button" value="button" onclick="test('cancer')" tabindex="10"> Cancer </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('scorpio')" tabindex="11"> Scorpio </td>
-    <td class="horoscopeButton" type="button" value="button" onclick="test('pisces')" tabindex="12"> Pisces </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('cancer')" tabindex="10"> Cancer </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('scorpio')" tabindex="11"> Scorpio </td>
+    <td class="horoscopeButton" type="button" value="button" onclick="getScopes('pisces')" tabindex="12"> Pisces </td>
    </tr>
     </table>
   </main>  
