@@ -28,6 +28,7 @@ function lastUpdated(){
 /* movie picker form */
 function formValidation() {
 
+/* options for different elements in form */  
   // let name = document.forms["movieForm"]["first"].value;
   // let email = document.forms["movieForm"]["email"].value;
   // let pronoun = document.forms["movieForm"]["pronoun"].value;
@@ -36,7 +37,8 @@ function formValidation() {
   
 
   let starSign = dateToSign(birthday);
-  
+
+/* retrieving the given movie from each labelled star sign folder */  
   document.getElementById("formImage").src = `/images/${starSign}/${genre}.jpg`;
   
   let temp = document.getElementById("formResults");
@@ -70,6 +72,7 @@ function dateToSign(date){
     ["pisces",2,19,3,20],
   ];
 
+ /* using a for loop to go through each individual date to retrieve star sign */ 
   for (let index = 0; index < signDateRanges.length; index++) {
     if (month == signDateRanges[index][1] && day >= signDateRanges[index][2]){
       return signDateRanges[index][0];
@@ -145,6 +148,7 @@ function pickRandomMovie() {
   
     var myMovie = new Array("images/aquarius/comedy.jpg","images/aries/drama.jpg","images/cancer/horror.jpg","images/capricorn/family.jpg","images/gemini/fantasy.jpg","images/libra/romance.jpg","images/leo/action.jpg","images/pisces/scifi.jpg","images/sag/drama.jpg","images/scorpio/comedy.jpg","images/taurus/mystery.jpg","images/virgo/superhero.jpg");
 
+ /* using math.random to generate random number which is multiplied by number of images in the array */ 
    var randomNum = Math.floor(Math.random() * myMovie.length);
    document.getElementById("randomMovie").src = myMovie[randomNum];
 

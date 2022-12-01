@@ -400,16 +400,6 @@ ul.y {
   transform: translateY(4px);
 }
 
-/*
-#randomMovie {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}*/
-
 /* horoscope main */
 .horoscopeHeader {
   font-size: 26px;
@@ -462,4 +452,5 @@ ul.y {
   body {
     background-color: black;
   }
+}
 

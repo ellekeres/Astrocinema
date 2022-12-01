@@ -47,6 +47,11 @@ footer {
   grid-gap: 10px;
 }
 
+@media screen and (max-width: 600px){
+  body {
+    background-color: black;
+  }
+
 .grid-container {
   display: grid;
   grid-template-areas:
